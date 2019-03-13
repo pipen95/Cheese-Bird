@@ -1,0 +1,79 @@
+.container {
+  margin: 0 auto;
+  min-height: 50rem;
+}
+
+.header {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(var(--color-tertiary-light)),
+    to(var(--color-tertiary))
+  );
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-tertiary-light),
+    var(--color-tertiary)
+  );
+  color: var(--color-primary);
+  -webkit-box-shadow: var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.features {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+}
+
+.boxes {
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(var(--color-tertiary-light)),
+    to(var(--color-secondary-light))
+  );
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-tertiary-light),
+    var(--color-secondary-light)
+  );
+}
+
+.sub {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/cheesebox.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  filter: opacity(0.7);
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  background-color: var(--color-dark);
+  color: var(--color-primary);
+  overflow: hidden;
+}

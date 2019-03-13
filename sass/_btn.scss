@@ -1,0 +1,60 @@
+// ////////////////////////////////
+// BTN
+
+.btn {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-tertiary-light),
+    var(--color-tertiary)
+  );
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 6rem;
+  }
+
+  &__invisible {
+    display: inline-block;
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+  }
+  &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &--submit {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+  }
+}
+.love {
+  color: rgb(214, 71, 71);
+}

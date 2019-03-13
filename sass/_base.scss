@@ -1,0 +1,48 @@
+// ////////////////////////////////
+// UNIVERSAL SETUP
+:root {
+  --color-primary: #fff;
+  --color-primary-dark: #d3d1d1;
+  --color-secondary: rgb(255, 198, 11);
+  --color-secondary-light: rgb(238, 201, 80);
+  --color-tertiary: #ff8b00;
+  --color-tertiary-dark: #ff7300;
+  --color-tertiary-light: #ffb049;
+  --color-dark: #444444;
+  --color-dark-light: #6d6a6a;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.021);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+$bp-largest: 75rem; //=1200px  /16px
+$bp-large: 68.75em; //=1100px /16px
+$bp-medium: 56.25em; //=900px /16px
+$bp-small: 37.5em; //=600px /16px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Lato", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  color: var(--color-dark);
+  font-weight: 300;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
