@@ -1,13 +1,13 @@
-.container {
-  margin: 0 auto;
-  min-height: 50rem;
-}
+// .container {
+//   max-width: 1500rem;
+// }
 
 .header {
   height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex: 0 1;
   position: relative;
   background-image: -webkit-gradient(
     linear,
@@ -26,14 +26,26 @@
   box-shadow: var(--shadow-dark);
 }
 
+
 .features {
   height: 120vh;
+  margin: 5rem auto;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  padding: 5rem 0;
+ 
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 75vw;
+    // height: 140vh;
 }
 
+}
 .boxes {
-  height: 120vh;
+ min-height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -58,7 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/cheesebox.jpg");
+  background-image: url(https://res.cloudinary.com/pipen95/image/upload/v1560599033/Cheese-bird/img/cheesebox_jmcapl.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

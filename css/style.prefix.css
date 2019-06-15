@@ -539,7 +539,9 @@ body {
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
+  transform: translateZ(0) scale(1, 1);
   cursor: pointer; }
   .btn > * {
     display: inline-block;
