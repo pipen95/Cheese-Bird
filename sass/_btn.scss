@@ -4,10 +4,11 @@
 .btn {
   font-size: 2rem;
   font-weight: 300;
+  padding: 2rem 5rem;
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
-  position: relative;
+ 
   background-image: linear-gradient(
     to right bottom,
     var(--color-tertiary-light),
@@ -15,7 +16,14 @@
   );
   color: #fff;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
+
+ &:hover {
+    outline: none;
+    animation: pulsate 1s infinite;
+ }
+
+       position: relative;
+         -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
   cursor: pointer;
 
@@ -26,10 +34,6 @@
     transition: all 0.2s;
   }
 
-  &__visible {
-    padding: 2rem 6rem;
-  }
-
   &__invisible {
     display: inline-block;
     position: absolute;
@@ -37,24 +41,32 @@
     left: 0;
     top: -100%;
   }
-  &:hover {
-    outline: none;
-    animation: pulsate 1s infinite;
-  }
+
   &:hover &__visible {
-    transform: translateY(100%);
+    transform: translateY(190%);
   }
 
   &:hover &__invisible {
     top: 0;
   }
+  
+
+@media only screen and (max-width: $bp-medium){
+   &__invisible {
+    display: none;
+  }
+
+   &:hover &__visible {
+    transform: none;
+   }
+  padding-bottom: 4rem;
+}
+
 
   &--submit {
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
     border-radius: 5px;
-  }
-}
-.love {
-  color: rgb(214, 71, 71);
+ }
+
 }

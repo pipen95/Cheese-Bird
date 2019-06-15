@@ -17,9 +17,10 @@
 
 $bp-largest: 75em; //=1200px  /16px
 $bp-large: 68.75em; //=1100px /16px
-$bp-medium: 56.25em; //=900px /16px
+$bp-med: 56.25em; //=900px /16px
+$bp-medium: 56.25em; //=700px /16px
 $bp-small: 37.5em; //=600px /16px
-$bp-smallest: 31.25em; // 500px
+$bp-smallest: 25em; // 500px
 
 * {
   margin: 0;
@@ -32,6 +33,14 @@ html {
   @media only screen and (max-width: $bp-small) {
     font-size: 55%;
 }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 50%;
+}
+
+}
+
+h1,h2 {
+  text-align: center;
 }
 
 body {
@@ -43,6 +52,8 @@ body {
   min-height: 100vh;
   background-color: var(--color-primary);
 }
+
+
 
 *,
 *::after,

@@ -1,5 +1,9 @@
 ////////////////////////////////////
 ///HEADINGS
+p {
+  text-align: justify;
+}
+
 .heading {
   &__primary {
     font-size: 7rem;
@@ -29,9 +33,12 @@
     font-size: 4rem;
     color: var(--color-primary);
     font-weight: 300;
+    margin: 5rem 0;
 
     &--2 {
       font-size: 4rem;
+      display: block;
+      margin: 5rem 0;
       background-image: -webkit-gradient(
         linear,
         left top,
@@ -67,4 +74,9 @@
       }
     }
   }
+}
+
+.love {
+  color: rgb(214, 71, 71);
+  font-size:2rem;
 }
