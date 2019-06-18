@@ -623,6 +623,11 @@ p {
     @media only screen and (max-width: 800px) {
       .heading__primary--sticky {
         top: 1.5rem; } }
+    @media only screen and (max-width: 25em) {
+      .heading__primary--sticky {
+        font-size: 3rem;
+        top: 2rem;
+        left: 8rem; } }
   @media only screen and (max-width: 25em) {
     .heading__primary {
       font-size: 5; } }
