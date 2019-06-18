@@ -6,35 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="./css/style.css">
-  <title>Cheese Bird</title>
+  <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/pipen95/image/upload/v1560875416/Cheese-bird/img/Cheese-bird-favicon.png">
+  <title>Cheese Bird | Cheese delivery service</title>
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
-      <nav class="nav">
-        <div class="nav__logo">
-          <img src="https://res.cloudinary.com/pipen95/image/upload/v1560599032/Cheese-bird/img/Cheese-bird.jpg" alt="logo" class="nav__logo__img" />
+    <header class="header js__header">
+      <nav class="nav ">
+        <div class="nav__logo"> <a class="js__scroll-to-header">
+          <img src="https://res.cloudinary.com/pipen95/image/upload/v1560599032/Cheese-bird/img/Cheese-bird.jpg" alt="logo" class="nav__logo__img" /></a>
         </div>
-        <ul class="nav__list">
+        <ul class="nav__list js__nav-list">
           <li class="nav__item">
-            <a href="#features" class="nav__link"></a>How it works
+            <a  class="nav__link js__scroll-to-features">How it works</a>
           </li>
           <li class="nav__item">
-            <a href="#works" class="nav__link"></a>Boxes
+            <a  class="nav__link js__scroll-to-boxes">Boxes</a>
           </li>
           <li class="nav__item">
-            <a href="#cities" class="nav__link"></a>Subscribe
+            <a  class="nav__link js__scroll-to-sub">Subscribe</a>
           </li>
           <li class="nav__item">
-            <a href="#plans" class="nav__link"></a>Contact
+            <a  class="nav__link">Contact</a>
           </li>
         </ul>
+        <a class="mobile">
+          <svg class="mobile__open js__open display" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <title>menu</title>
+            <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+            </svg>
+            <svg class="mobile__close js__close"version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+              <title>close</title>
+              <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+              </svg>
+        </a>
       </nav>
-    </header>
 
-    <main class="main">
-      <section class="hero">
+      <div class="hero">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="https://res.cloudinary.com/pipen95/video/upload/v1560790362/Cheese-bird/img/Cheese-Stack.webm">
@@ -57,9 +66,11 @@
             </span>
           </button>
         </div>
-      </section>
-     
-      <section class="features">
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="features js__features">
         <div class="feature-box">
             <h2 class="heading__secondary--2">How it works</h2>
           <div class="feature">
@@ -93,7 +104,7 @@
         </div>
       </section>
 
-      <section class="boxes">
+      <section class="boxes js__boxes">
           <h2 class="heading__secondary">Choose your Box</h2>
         <div class="box">
         
@@ -124,7 +135,7 @@
 
       </section>
 
-      <section class="sub">
+      <section class="sub js__sub">
         <div class="form-box">
           <form action="#" method="POST" class="form">
             <h2 class="heading__secondary heading__secondary--3">Weekly Newsletter</h2>
@@ -158,16 +169,19 @@
           </li>
         </ul>
       </nav>
-      <div class="footer-logo">
-        <img src="https://res.cloudinary.com/pipen95/image/upload/v1560599032/Cheese-bird/img/Cheese-bird.jpg" alt="logo" class="footer-logo__img" />
+      <div class="footer-logo"><a class="js__scroll-to-header">
+        <img src="https://res.cloudinary.com/pipen95/image/upload/v1560599032/Cheese-bird/img/Cheese-bird.jpg" alt="logo" class="footer-logo__img" /></a>
       </div>
       <div class="footer-copy">
         <p class="footer-copy__text">
-          &copy;Cheesebird 2019. Created with <span class="love">&#x2764</span> by Pipen95.
-        </p>
+          &copy;Cheesebird 2019. Created with <span class="love">&#x2764</span> by <a href="http://github.com/pipen95" target="blank" class="footer-nav__item footer-nav__item--name">Pipen95</a>
+        
       </div>
     </footer>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jquery.waypoints.min.js"></script>
   <script src="index.js"></script>
+  
 </body>
 </html>

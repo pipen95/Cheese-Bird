@@ -27,13 +27,21 @@ p {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 5;
+    }
   }
 
   &__secondary {
     font-size: 4rem;
     color: var(--color-primary);
     font-weight: 300;
-    margin: 5rem 0;
+    margin: 5rem 0 2rem 0;
+
+    @media only screen and (max-width: $bp-mobile) {
+      font-size: 3rem;
+    }
 
     &--2 {
       font-size: 4rem;
@@ -78,5 +86,5 @@ p {
 
 .love {
   color: rgb(214, 71, 71);
-  font-size:2rem;
+  font-size: 2rem;
 }

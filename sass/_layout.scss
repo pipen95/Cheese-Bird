@@ -1,52 +1,27 @@
-// .container {
-//   max-width: 1500rem;
-// }
-
-.header {
-  height: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex: 0 1;
+.container {
+  max-width: 150rem;
   position: relative;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    from(var(--color-tertiary-light)),
-    to(var(--color-tertiary))
-  );
-  background-image: linear-gradient(
-    to right bottom,
-    var(--color-tertiary-light),
-    var(--color-tertiary)
-  );
-  color: var(--color-primary);
-  -webkit-box-shadow: var(--shadow-dark);
-  box-shadow: var(--shadow-dark);
 }
 
+// Main-nav
+.header {
+  min-height: 100vh;
+}
 
 .features {
-  margin: 10rem auto 15rem auto ;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
- 
-
-  @media only screen and (max-width: $bp-medium) {
-    margin: 15rem auto;
 }
 
-}
 .boxes {
- min-height: 120vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  overflow: hidden;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -62,11 +37,11 @@
 }
 
 .sub {
-  height: 90vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(https://res.cloudinary.com/pipen95/image/upload/v1560599033/Cheese-bird/img/cheesebox_jmcapl.jpg);
+  background-image: url(https://res.cloudinary.com/pipen95/image/upload/v1560599033/Cheese-bird/img/cheesebox.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,20 +49,21 @@
   position: relative;
   filter: opacity(0.7);
   overflow: hidden;
+  backface-visibility: hidden;
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
-  align-items:flex-start;
-  padding:5rem 0;
+  align-items: flex-start;
+  padding: 5rem 0;
   background-color: var(--color-dark);
   color: var(--color-primary);
   overflow: hidden;
 
-  @media only screen and (max-width: $bp-med){
+  @media only screen and (max-width: $bp-med) {
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
   }
 }

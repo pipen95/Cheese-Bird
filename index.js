@@ -1,3 +1,4 @@
+// CDN img optimisation
 (() => {
   const baseUrl = "https://res.cloudinary.com/pipen95/image/upload/";
 
@@ -11,3 +12,72 @@
     image.style.backgroundImage = `url('${url}')`;
   });
 })();
+
+// Sticky Navigation
+$(document).ready(function() {
+  $(".js__features").waypoint(
+    function(direction) {
+      if (direction == "down") {
+        $(".nav").addClass("nav--sticky") &&
+          $(".mobile").addClass("mobile--sticky");
+      } else {
+        $(".nav").removeClass("nav--sticky") &&
+          $(".mobile").removeClass("mobile--sticky");
+      }
+    },
+    {
+      offset: "80px;"
+    }
+  );
+  // Srcoll on buttons
+  $(".js__scroll-to-header").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $(".js__header").offset().top
+      },
+      1500
+    );
+  });
+
+  $(".js__scroll-to-features").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $(".js__features").offset().top
+      },
+      1500
+    );
+  });
+
+  $(".js__scroll-to-boxes").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $(".js__boxes").offset().top
+      },
+      1500
+    );
+  });
+
+  $(".js__scroll-to-sub").click(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $(".js__sub").offset().top
+      },
+      1500
+    );
+  });
+  // Mobile navigation
+  $(".js__open,.js__close").click(function() {
+    var nav = $(".js__nav-list");
+    var open = $(".js__open");
+    var close = $(".js__close");
+
+    nav.slideToggle(400);
+    if (open.hasClass("display")) {
+      open.removeClass("display");
+      close.addClass("display");
+    } else {
+      close.removeClass("display");
+      open.addClass("display");
+    }
+  });
+});

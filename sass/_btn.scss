@@ -8,7 +8,7 @@
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
- 
+
   background-image: linear-gradient(
     to right bottom,
     var(--color-tertiary-light),
@@ -17,13 +17,13 @@
   color: #fff;
   overflow: hidden;
 
- &:hover {
+  &:hover {
     outline: none;
     animation: pulsate 1s infinite;
- }
+  }
 
-       position: relative;
-         -webkit-backface-visibility: hidden;
+  position: relative;
+  -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
   cursor: pointer;
 
@@ -49,24 +49,57 @@
   &:hover &__invisible {
     top: 0;
   }
-  
 
-@media only screen and (max-width: $bp-medium){
-   &__invisible {
-    display: none;
+  @media only screen and (max-width: $bp-medium) {
+    &__invisible {
+      display: none;
+    }
+
+    &:hover &__visible {
+      transform: none;
+    }
+    padding-bottom: 4rem;
   }
-
-   &:hover &__visible {
-    transform: none;
-   }
-  padding-bottom: 4rem;
-}
-
 
   &--submit {
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
     border-radius: 5px;
- }
+  }
+}
 
+// MOBILE BTN
+
+.mobile {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  z-index: 9999;
+  cursor: pointer;
+  fill: currentColor;
+
+  & :hover {
+    fill: var(--color-dark-light);
+  }
+
+  &__open,
+  &__close {
+    width: 4rem;
+    height: 4rem;
+    display: none;
+  }
+
+  &--sticky {
+    top: 2rem;
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+
+.display {
+  @media only screen and (max-width: $bp-smallest) {
+    display: block;
+  }
 }
