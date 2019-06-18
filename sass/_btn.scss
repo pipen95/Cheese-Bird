@@ -73,7 +73,7 @@
 .mobile {
   position: absolute;
   top: 3rem;
-  right: 2rem;
+  right: 3rem;
   z-index: 9999;
   cursor: pointer;
   fill: currentColor;
@@ -99,7 +99,7 @@
 }
 
 .display {
-  @media only screen and (max-width: $bp-smallest) {
+  @media only screen and (max-width: 800px) {
     display: block;
   }
 }

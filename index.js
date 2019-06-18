@@ -19,10 +19,12 @@ $(document).ready(function() {
     function(direction) {
       if (direction == "down") {
         $(".nav").addClass("nav--sticky") &&
-          $(".mobile").addClass("mobile--sticky");
+          $(".mobile").addClass("mobile--sticky") &&
+          $(".heading__primary--2").addClass("heading__primary--sticky");
       } else {
         $(".nav").removeClass("nav--sticky") &&
-          $(".mobile").removeClass("mobile--sticky");
+          $(".mobile").removeClass("mobile--sticky") &&
+          $(".heading__primary--2").removeClass("heading__primary--sticky");
       }
     },
     {

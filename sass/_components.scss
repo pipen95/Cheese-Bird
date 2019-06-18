@@ -4,28 +4,22 @@
 //Main Nav
 .nav {
   height: auto;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 0 1;
-  flex: 0 1;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  opacity: 1;
-  width: 100%;
-  z-index: 100;
+  padding: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  opacity: 1;
+  width: 100vw;
+  z-index: 100;
 
-  @media only screen and (max-width: $bp-smallest) {
+  @media only screen and (max-width: 800px) {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
   }
-
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -49,21 +43,23 @@
     top: 0;
     left: 0;
     opacity: 0.95;
-    height: 11vh;
+    padding: 4rem 0;
     -webkit-box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74);
     box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74);
 
     img {
       height: 4rem;
       width: 4rem;
+      top: 4rem;
     }
   }
 
   &__logo {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    margin: 1rem 0 1rem 2rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
     cursor: pointer;
 
     &__img {
@@ -92,13 +88,14 @@
     display: -ms-flexbox;
     display: flex;
     list-style: none;
+    margin-right: 2rem;
 
-    @media only screen and (max-width: $bp-smallest) {
+    @media only screen and (max-width: 800px) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      margin: 2rem 0 2rem 4rem;
+      margin: 2rem 1rem 2rem 4rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -122,7 +119,7 @@
       cursor: pointer;
     }
 
-    @media only screen and (max-width: $bp-smallest) {
+    @media only screen and (max-width: 800px) {
       margin: 2rem 0 0 0;
       font-size: 2.5rem;
     }

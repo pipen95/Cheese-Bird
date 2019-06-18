@@ -28,6 +28,24 @@ p {
     background-clip: text;
     color: transparent;
 
+    &--2 {
+      font-size: 4rem;
+      margin-bottom: 0;
+      background-image: none;
+      color: var(--color-secondary-light);
+      position: absolute;
+      left: 10rem;
+      top: 3rem;
+      display: none;
+    }
+
+    &--sticky {
+      display: block;
+      @media only screen and (max-width: 800px) {
+        top: 1.5rem;
+      }
+    }
+
     @media only screen and (max-width: $bp-mobile) {
       font-size: 5;
     }
