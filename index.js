@@ -28,7 +28,7 @@ $(document).ready(function() {
       }
     },
     {
-      offset: "80px;"
+      offset: "150px;"
     }
   );
   // Srcoll on buttons
@@ -44,7 +44,7 @@ $(document).ready(function() {
   $(".js__scroll-to-features").click(function() {
     $("html, body").animate(
       {
-        scrollTop: $(".js__features").offset().top
+        scrollTop: $(".js__features").offset().top - 100
       },
       1500
     );
@@ -53,7 +53,7 @@ $(document).ready(function() {
   $(".js__scroll-to-boxes").click(function() {
     $("html, body").animate(
       {
-        scrollTop: $(".js__boxes").offset().top
+        scrollTop: $(".js__boxes").offset().top - 100
       },
       1500
     );
@@ -62,7 +62,7 @@ $(document).ready(function() {
   $(".js__scroll-to-sub").click(function() {
     $("html, body").animate(
       {
-        scrollTop: $(".js__sub").offset().top
+        scrollTop: $(".js__sub").offset().top - 100
       },
       1500
     );
