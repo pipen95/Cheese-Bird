@@ -44,8 +44,12 @@ p {
       @media only screen and (max-width: 800px) {
         top: 1.5rem;
       }
+      @media only screen and (max-width: $bp-mobile) {
+        font-size: 3rem;
+        top: 2rem;
+        left: 8rem;
+      }
     }
-
     @media only screen and (max-width: $bp-mobile) {
       font-size: 5;
     }
