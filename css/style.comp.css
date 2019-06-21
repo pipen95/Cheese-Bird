@@ -581,7 +581,6 @@ body {
   backface-visibility: hidden; }
 
 .footer {
-  height: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
