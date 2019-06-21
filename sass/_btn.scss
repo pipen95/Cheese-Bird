@@ -72,25 +72,25 @@
 
 .mobile {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
-  z-index: 9999;
+  margin-right: 2rem;
   cursor: pointer;
   fill: currentColor;
-
+  @media only screen and (max-width: 800px) {
+    position: relative;
+  }
   & :hover {
     fill: var(--color-dark-light);
   }
 
   &__open,
   &__close {
+    display: none;
     width: 4rem;
     height: 4rem;
-    display: none;
+    
   }
 
   &--sticky {
-    top: 2rem;
     svg {
       width: 3.5rem;
       height: 3.5rem;
@@ -101,5 +101,6 @@
 .display {
   @media only screen and (max-width: 800px) {
     display: block;
+    position: relative;
   }
 }

@@ -30,29 +30,23 @@ p {
 
     &--2 {
       font-size: 4rem;
-      margin-bottom: 0;
+      margin: 0 0 0 2rem;
       background-image: none;
       color: var(--color-secondary-light);
-      position: absolute;
-      left: 10rem;
-      top: 3rem;
       display: none;
     }
 
     &--sticky {
-      display: block;
-      @media only screen and (max-width: 800px) {
-        top: 1.5rem;
-      }
+      display:block;
+ 
       @media only screen and (max-width: $bp-mobile) {
         font-size: 3rem;
-        top: 2rem;
-        left: 8rem;
       }
     }
 
     @media only screen and (max-width: $bp-mobile) {
       font-size: 5;
+      margin-top: 0.7rem;
     }
   }
 

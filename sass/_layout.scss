@@ -9,7 +9,7 @@
 }
 
 .features {
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .boxes {
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -37,7 +37,7 @@
 }
 
 .sub {
-  min-height: 80vh;
+  height:80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +53,7 @@
 }
 
 .footer {
+  height: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;

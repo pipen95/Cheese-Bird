@@ -4,22 +4,17 @@
 //Main Nav
 .nav {
   height: auto;
-  padding: 5rem 0;
+  padding: 1rem 0;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   opacity: 1;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 
-  @media only screen and (max-width: 800px) {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-  }
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -43,23 +38,19 @@
     top: 0;
     left: 0;
     opacity: 0.95;
-    padding: 4rem 0;
     -webkit-box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74);
     box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74);
 
     img {
       height: 4rem;
       width: 4rem;
-      top: 4rem;
     }
   }
 
   &__logo {
     display: -webkit-box;
     display: -ms-flexbox;
-    position: absolute;
-    top: 2rem;
-    left: 1rem;
+    margin-left: 2rem;
     cursor: pointer;
 
     &__img {
@@ -95,12 +86,13 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      margin: 2rem 1rem 2rem 4rem;
+      // margin: 2rem 1rem 2rem 4rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      z-index: 9999;
       display: none;
+      margin-bottom: 2rem;
+
     }
   }
 
@@ -121,7 +113,11 @@
 
     @media only screen and (max-width: 800px) {
       margin: 2rem 0 0 0;
-      font-size: 2.5rem;
+      font-size: 2.5rem; 
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right:0;
     }
   }
 }
@@ -130,7 +126,7 @@
 // HERO
 
 .hero {
-  height: 85vh;
+  height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,6 +176,7 @@
   height: 40rem;
   width: 80rem;
   padding: 0 5rem;
+  margin-top: 10rem;
 }
 
 // ////////////////////////////////
@@ -456,7 +453,8 @@
 .form {
   position: relative;
   height: 50vh;
-  width: 60rem;
+  width: 50rem;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,6 +474,10 @@
     display: inline-block;
     width: 40rem;
     text-align: center;
+
+    @media only screen and (max-width: $bp-mobile) {
+      width: 90vw;
+    }
   }
 
   &__group {
@@ -493,6 +495,10 @@
     box-sizing: border-box;
     padding: 0.7rem;
     width: 40rem;
+    @media only screen and (max-width: $bp-mobile) {
+      width: 90vw;
+    }
+    
   }
 
   &__input {

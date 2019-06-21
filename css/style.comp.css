@@ -44,45 +44,36 @@ body {
 
 .nav {
   height: auto;
-  padding: 5rem 0;
+  padding: 1rem 0;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   opacity: 1;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
   background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-tertiary-light)), to(var(--color-tertiary)));
   background-image: linear-gradient(to right bottom, var(--color-tertiary-light), var(--color-tertiary));
   color: var(--color-primary);
   -webkit-box-shadow: var(--shadow-dark);
   box-shadow: var(--shadow-dark); }
-  @media only screen and (max-width: 800px) {
-    .nav {
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: start; } }
   .nav--sticky {
     position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
     opacity: 0.95;
-    padding: 4rem 0;
     -webkit-box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74);
     box-shadow: 1px 1px 3px rgba(151, 150, 150, 0.74); }
     .nav--sticky img {
       height: 4rem;
-      width: 4rem;
-      top: 4rem; }
+      width: 4rem; }
   .nav__logo {
     display: -webkit-box;
     display: -ms-flexbox;
-    position: absolute;
-    top: 2rem;
-    left: 1rem;
+    margin-left: 2rem;
     cursor: pointer; }
     .nav__logo__img {
       -webkit-box-sizing: content-box;
@@ -113,12 +104,11 @@ body {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin: 2rem 1rem 2rem 4rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        z-index: 9999;
-        display: none; } }
+        display: none;
+        margin-bottom: 2rem; } }
   .nav__item {
     margin-right: 2rem; }
     .nav__item:hover {
@@ -136,9 +126,12 @@ body {
       .nav__item {
         margin: 2rem 0 0 0;
         font-size: 2.5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .nav__item {
+        margin-right: 0; } }
 
 .hero {
-  height: 85vh;
+  height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,7 +176,8 @@ body {
   justify-content: space-evenly;
   height: 40rem;
   width: 80rem;
-  padding: 0 5rem; }
+  padding: 0 5rem;
+  margin-top: 10rem; }
 
 @-webkit-keyframes pulsate {
   0% {
@@ -400,7 +394,7 @@ body {
 .form {
   position: relative;
   height: 50vh;
-  width: 60rem;
+  width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,6 +413,9 @@ body {
     display: inline-block;
     width: 40rem;
     text-align: center; }
+    @media only screen and (max-width: 25em) {
+      .form__text {
+        width: 90vw; } }
   .form__group {
     border-collapse: separate;
     display: -webkit-box;
@@ -434,6 +431,9 @@ body {
     box-sizing: border-box;
     padding: 0.7rem;
     width: 40rem; }
+    @media only screen and (max-width: 25em) {
+      .form__group {
+        width: 90vw; } }
   .form__input {
     border: none;
     font-family: inherit;
@@ -550,14 +550,14 @@ body {
   min-height: 100vh; }
 
 .features {
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly; }
 
 .boxes {
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -566,7 +566,7 @@ body {
   background-image: linear-gradient(to right bottom, var(--color-tertiary-light), var(--color-secondary-light)); }
 
 .sub {
-  min-height: 80vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,6 +581,7 @@ body {
   backface-visibility: hidden; }
 
 .footer {
+  height: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -611,26 +612,19 @@ p {
   color: transparent; }
   .heading__primary--2 {
     font-size: 4rem;
-    margin-bottom: 0;
+    margin: 0 0 0 2rem;
     background-image: none;
     color: var(--color-secondary-light);
-    position: absolute;
-    left: 10rem;
-    top: 3rem;
     display: none; }
   .heading__primary--sticky {
     display: block; }
-    @media only screen and (max-width: 800px) {
-      .heading__primary--sticky {
-        top: 1.5rem; } }
     @media only screen and (max-width: 25em) {
       .heading__primary--sticky {
-        font-size: 3rem;
-        top: 2rem;
-        left: 8rem; } }
+        font-size: 3rem; } }
   @media only screen and (max-width: 25em) {
     .heading__primary {
-      font-size: 5; } }
+      font-size: 5;
+      margin-top: 0.7rem; } }
 
 .heading__secondary {
   font-size: 4rem;
@@ -706,23 +700,23 @@ p {
 
 .mobile {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
-  z-index: 9999;
+  margin-right: 2rem;
   cursor: pointer;
   fill: currentColor; }
+  @media only screen and (max-width: 800px) {
+    .mobile {
+      position: relative; } }
   .mobile :hover {
     fill: var(--color-dark-light); }
   .mobile__open, .mobile__close {
+    display: none;
     width: 4rem;
-    height: 4rem;
-    display: none; }
-  .mobile--sticky {
-    top: 2rem; }
-    .mobile--sticky svg {
-      width: 3.5rem;
-      height: 3.5rem; }
+    height: 4rem; }
+  .mobile--sticky svg {
+    width: 3.5rem;
+    height: 3.5rem; }
 
 @media only screen and (max-width: 800px) {
   .display {
-    display: block; } }
+    display: block;
+    position: relative; } }
